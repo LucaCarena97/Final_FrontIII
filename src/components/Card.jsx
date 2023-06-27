@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import img from "../images/doctor.jpg";
+// import img from "../images/doctor.jpg";
+// import style from "./Card.module.css";
 
 export function Card({ id, name, username }) {
   const odontologo = {
@@ -15,14 +17,16 @@ export function Card({ id, name, username }) {
       odontologos.push(odontologo);
       localStorage.setItem("odontologos", JSON.stringify(odontologos));
     } else {
-      alert(`El odontólogo ${odontologo.name}ya ha sido agregado a favoritos.`);
+      alert(
+        `El odontólogo ${odontologo.name} ya ha sido agregado a favoritos.`
+      );
     }
     console.log("Agregando odontologos" + odontologo.id);
   }
 
   return (
     <article>
-      <img src={img} alt="doctor" />
+      {/* <img className={style.card} src={img} alt="doctor" /> */}
       <h2>
         <Link to={`/${id}`}>{name}</Link>
       </h2>

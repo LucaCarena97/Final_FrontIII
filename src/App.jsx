@@ -2,16 +2,24 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./routes/Home";
 import { Favs } from "./routes/Favs";
+import { Contact } from "./routes/Contact";
+import { Navbar } from "./components/Navbar";
+import { Detail } from "./routes/Detail";
 
 function App() {
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/favs" element={<Favs />} />
-        </Routes>
-      </Router>
+      <div className="App">
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/favs" element={<Favs />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/:id" element={<Detail />} />
+          </Routes>
+        </Router>
+      </div>
     </>
   );
 }
