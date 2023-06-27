@@ -1,7 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-useState;
+import "../routes/Detail.modules.css";
 
 export function Detail() {
   const params = useParams();
@@ -20,13 +20,13 @@ export function Detail() {
   }, []);
 
   return (
-    <article>
-      <h2>Detalles</h2>
-      <div>
-        <p>Nombre: {detalle.name}</p>
-        <p>Email: {detalle.email}</p>
-        <p>Celular: {detalle.phone}</p>
-        <p>Web: {detalle.website}</p>
+    <article className="detalle">
+      <h2 className="title-detalle">Detalles</h2>
+      <div className="info">
+        <p className="data">Nombre: {detalle.name}</p>
+        <p className="data">Email: {detalle.email}</p>
+        <p className="data">Celular: {detalle.phone}</p>
+        <p className="data">Web: {detalle.website}</p>
       </div>
     </article>
   );

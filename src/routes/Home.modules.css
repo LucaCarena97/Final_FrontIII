@@ -1,0 +1,19 @@
+.home {
+  text-align: center;
+  background-color: burlywood;
+  padding: 20px;
+}
+
+.principal {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5%;
+  height: 100%;
+}

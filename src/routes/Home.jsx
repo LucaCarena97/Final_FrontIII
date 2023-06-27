@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Card } from "../components/Card";
+import "../routes/Home.modules.css";
 
 export function Home() {
   const [data, setData] = useState([]);
@@ -11,15 +12,14 @@ export function Home() {
 
   useEffect(() => {
     fetchData();
-    //    return () => {
-    //      setData("");
-    //    };
   }, []);
 
   return (
-    <article>
-      <h1>Home</h1>
-      <section>
+    <article className="home">
+      <p className="principal">Bienvenido a la sección principal</p>
+      <hr />
+      <br />
+      <section className="card-home">
         {data.map(function (item) {
           return (
             <Card

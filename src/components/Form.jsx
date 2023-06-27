@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Form.modules.css";
 
 export function Form() {
   const [name, setName] = useState("");
@@ -10,40 +11,36 @@ export function Form() {
     e.preventDefault();
 
     if (name.length < 5 && !email.includes("@")) {
-      setError("Por favor verifique su información nuevamente");
+      setError("Datos invalidos");
       return;
     }
-
-    setSuccessMessage(
-      `Gracias ${name}, te contactaremos lo antes posible vía email`
-    );
+    setSuccessMessage(`Gracias ${name} por contactarnos`);
+    setError("");
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Nombre completo:
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <br />
-        <button type="submit">Enviar</button>
+      <form className="formulario" onSubmit={handleSubmit}>
+        <input
+          className="formulario-input"
+          type="text"
+          value={name}
+          placeholder="Nombre"
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          className="formulario-input"
+          type="email"
+          value={email}
+          placeholder="Correo electronico"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button className="form-button" type="submit">
+          Enviar
+        </button>
       </form>
-      {error && <p>{error}</p>}
-      {successMessage && <p>{successMessage}</p>}
+      {error && <p className="error">{error}</p>}
+      {successMessage && <p className="enviado">{successMessage}</p>}
     </div>
   );
 }

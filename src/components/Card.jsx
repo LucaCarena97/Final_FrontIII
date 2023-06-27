@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-// import img from "../images/doctor.jpg";
-// import style from "./Card.module.css";
+import img from "../images/doctor.jpg";
+import "./Card.modules.css";
 
 export function Card({ id, name, username }) {
   const odontologo = {
@@ -25,14 +25,15 @@ export function Card({ id, name, username }) {
   }
 
   return (
-    <article>
-      {/* <img className={style.card} src={img} alt="doctor" /> */}
-      <h2>
-        <Link to={`/${id}`}>{name}</Link>
-      </h2>
-      <p>{odontologo.username}</p>
-
-      <button onClick={addFav}>Add to Favorites</button>
+    <article className="card">
+      <Link to={`/details/${id}`} className="card-link">
+        <img className="imagen" src={img} alt="doctor" />
+        <h2 className="name">{name}</h2>
+        <p className="user">{odontologo.username}</p>
+      </Link>
+      <button className="boton-card" onClick={addFav}>
+        Add to Favorites
+      </button>
     </article>
   );
 }
