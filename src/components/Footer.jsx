@@ -3,10 +3,16 @@ import face from "../images/ico-facebook.png";
 import ig from "../images/ico-instagram.png";
 import tik from "../images/ico-tiktok.png";
 import wp from "../images/ico-whatsapp.png";
+import { ContextGlobal } from "./utils/global.context";
+import { useContext } from "react";
 
 export function Footer() {
+  const { tema } = useContext(ContextGlobal);
   return (
-    <footer className="footer">
+    <footer
+      className="footer"
+      style={{ backgroundColor: tema.footer, color: tema.font }}
+    >
       <div className="info-footer">
         <p className="nombre">Luca Carena</p>
         <p className="final">Final Front III</p>
@@ -28,3 +34,4 @@ export function Footer() {
     </footer>
   );
 }
+//

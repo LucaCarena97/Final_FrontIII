@@ -12,7 +12,7 @@ export function Favs() {
     setOdontologos(actDentista);
   }, [odontologos]);
 
-  function removeFromFavorites(id) {
+  function removerFavorito(id) {
     const actDentista = odontologos.filter(
       (odontologo) => odontologo.id !== id
     );
@@ -34,7 +34,7 @@ export function Favs() {
             >
               <button
                 className="borrar-button"
-                onClick={() => removeFromFavorites(item.id)}
+                onClick={() => removerFavorito(item.id)}
               >
                 Borrar
               </button>
