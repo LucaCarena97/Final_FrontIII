@@ -4,12 +4,12 @@ import { useParams, Link } from "react-router-dom";
 import "../routes/Detail.modules.css";
 
 export function Detail() {
-  const params = useParams();
+  const { id } = useParams();
   const [detalle, setDetalle] = useState({});
 
   async function detailFetch() {
     const response = await fetch(
-      `https://jsonplaceholder.typicode.com/users/${params.id}`
+      `https://jsonplaceholder.typicode.com/users/${id}`
     );
     const data = await response.json();
     setDetalle(data);

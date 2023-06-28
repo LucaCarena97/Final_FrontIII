@@ -6,7 +6,7 @@ import { Contact } from "./routes/Contact";
 import { Navbar } from "./components/Navbar";
 import { Detail } from "./routes/Detail";
 import { Footer } from "./components/Footer";
-import { ContextProvider } from "./components/utils/global.context";
+import { ContextProvider } from "./components/utils/ContextProvider";
 
 function App() {
   return (

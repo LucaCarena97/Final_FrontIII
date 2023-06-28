@@ -5,29 +5,42 @@ export function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+  const [mensaje, setMensaje] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name.length <= 3 || !email.includes("@")) {
+    if (name.length <= 2 || !email.includes("@")) {
       setError("Datos inválidos");
       return;
     }
 
-    setSuccessMessage(`Gracias ${name} por contactarnos`);
+    setMensaje(
+      <>
+        Gracias {name} por contactarnos
+        <br />
+        Recargar página para volver a enviar
+      </>
+    );
+
     setError("");
+    setSubmitted(true);
   };
 
   useEffect(() => {
-    if (successMessage) {
+    if (mensaje) {
       const timer = setTimeout(() => {
-        setSuccessMessage("");
-      }, 3000);
+        setMensaje("");
+      }, 3500);
 
       return () => clearTimeout(timer);
     }
-  }, [successMessage]);
+  }, [mensaje]);
+
+  useEffect(() => {
+    setSubmitted(false);
+  }, []);
 
   return (
     <div>
@@ -46,12 +59,14 @@ export function Form() {
           placeholder="Correo electronico"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button className="form-button" type="submit">
-          Enviar
-        </button>
+        {!submitted && (
+          <button className="form-button" type="submit">
+            Enviar
+          </button>
+        )}
       </form>
       {error && <p className="error">{error}</p>}
-      {successMessage && <p className="enviado">{successMessage}</p>}
+      {mensaje && <p className="enviado">{mensaje}</p>}
     </div>
   );
 }
