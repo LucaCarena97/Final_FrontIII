@@ -1,24 +1,14 @@
 .formulario {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
+  margin-top: 50px;
 }
 
 .formulario-input {
   font-size: 1.7rem;
   margin: 5%;
 }
-
-/* .form-button {
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.form-button:hover {
-  background-color: aquamarine;
-} */
 
 .form-button {
   background-color: #4caf50;
@@ -29,6 +19,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 20px;
 }
 
 .form-button:hover {
@@ -36,6 +27,7 @@
 }
 
 .error {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
   color: red;
   font-size: 1.1rem;

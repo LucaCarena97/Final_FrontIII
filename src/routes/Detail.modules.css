@@ -3,26 +3,37 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* border: 2px solid blue; */
   background-color: rgba(127, 255, 212, 0.568);
-  /* height: 100vh; */
+  height: 80vh;
 }
 
 .title-detalle {
   font-size: 2rem;
   font-family: Arial, Helvetica, sans-serif;
-  /* border: 2px solid blue; */
+
   user-select: none;
 }
 
 .info {
   margin: 10px;
-  /* border: 2px solid blue; */
+
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.7rem;
   user-select: none;
 }
 
-.data {
-  /* border: 2px solid blue; */
+.atras {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0px 40px 0px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.atras:hover {
+  background-color: #0056b3;
 }

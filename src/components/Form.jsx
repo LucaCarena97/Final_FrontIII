@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Form.modules.css";
 
 export function Form() {
@@ -10,13 +10,24 @@ export function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name.length < 5 && !email.includes("@")) {
-      setError("Datos invalidos");
+    if (name.length <= 3 || !email.includes("@")) {
+      setError("Datos inválidos");
       return;
     }
+
     setSuccessMessage(`Gracias ${name} por contactarnos`);
     setError("");
   };
+
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => {
+        setSuccessMessage("");
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage]);
 
   return (
     <div>

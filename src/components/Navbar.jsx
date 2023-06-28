@@ -13,7 +13,7 @@ export function Navbar() {
       <Link className="nav-title" to={"/favs"}>
         Favoritos
       </Link>
-      <button className="boton">Theme</button>
+      <button className="boton">Tema</button>
     </nav>
   );
 }

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "../routes/Detail.modules.css";
 
 export function Detail() {
@@ -28,6 +28,9 @@ export function Detail() {
         <p className="data">Celular: {detalle.phone}</p>
         <p className="data">Web: {detalle.website}</p>
       </div>
+      <Link to="/" className="atras">
+        Volver a Inicio
+      </Link>
     </article>
   );
 }

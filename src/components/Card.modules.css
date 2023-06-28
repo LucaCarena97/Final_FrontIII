@@ -1,6 +1,6 @@
 .card {
   width: 15%;
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,8 +8,13 @@
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.467);
   transition: transform 0.3s ease;
+  background-color: #8d7966e2;
+}
+
+.card-link {
+  text-decoration: none;
 }
 
 .card:hover {
@@ -17,7 +22,7 @@
 }
 
 .imagen {
-  border: 3px solid rgb(255, 106, 0);
+  border: 3px solid #5e5043;
   width: 80%;
   max-height: 200px;
   object-fit: cover;
@@ -26,19 +31,20 @@
 }
 
 .name {
-  text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  color: #333;
+  font-size: 1.4rem;
+  color: #262525;
   margin-top: 10px;
   text-align: center;
+  text-decoration: none;
 }
 
 .user {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 14px;
-  color: #666;
+  font-size: 1.1rem;
+  color: #3f3f3f;
   margin-bottom: 10px;
+  text-decoration: none;
 }
 
 .boton-card {
@@ -55,4 +61,43 @@
 
 .boton-card:hover {
   background-color: #45a049;
+}
+
+.boton-card-delete {
+  margin-top: 15px;
+  background-color: #af4c4c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-card-delete:hover {
+  background-color: #a04845d8;
+}
+
+.card.favorite {
+  background-color: #a27b6068;
+}
+
+.mensaje-card {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.mensaje-card.added {
+  background-color: #0fff07e2;
+  color: #000;
+}
+
+.mensaje-card:not(.added) {
+  background-color: #a72828e1;
+  color: #fff;
 }
