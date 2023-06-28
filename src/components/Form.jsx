@@ -18,7 +18,7 @@ export function Form() {
 
     setMensaje(
       <>
-        Gracias {name} por contactarnos
+        Gracias {name}, te contactaremos por {email}
         <br />
         Recargar página para volver a enviar
       </>
@@ -32,7 +32,7 @@ export function Form() {
     if (mensaje) {
       const timer = setTimeout(() => {
         setMensaje("");
-      }, 3500);
+      }, 3800);
 
       return () => clearTimeout(timer);
     }
