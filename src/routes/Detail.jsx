@@ -1,10 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "../routes/Detail.modules.css";
+import { ContextGlobal } from "../components/utils/global.context";
 
 export function Detail() {
   const { id } = useParams();
+  const { tema } = useContext(ContextGlobal);
   const [detalle, setDetalle] = useState({});
 
   async function detailFetch() {
@@ -20,7 +22,10 @@ export function Detail() {
   }, []);
 
   return (
-    <article className="detalle">
+    <article
+      className="detalle"
+      style={{ backgroundColor: tema.home, color: tema.font }}
+    >
       <h2 className="title-detalle">Detalles</h2>
       <div className="info">
         <p className="data">Nombre: {detalle.name}</p>
