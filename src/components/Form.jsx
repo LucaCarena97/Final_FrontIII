@@ -8,7 +8,7 @@ export function Form() {
   const [mensaje, setMensaje] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
 
     if (name.length <= 2 || !email.includes("@")) {
@@ -26,7 +26,7 @@ export function Form() {
 
     setError("");
     setSubmitted(true);
-  };
+  }
 
   useEffect(() => {
     if (mensaje) {

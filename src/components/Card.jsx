@@ -16,6 +16,7 @@ export function Card({ id, name, username }) {
   function addFav() {
     const odontologos = JSON.parse(localStorage.getItem("odontologos") || "[]");
     const odontologoAdd = odontologos.find((e) => e.id === odontologo.id);
+
     if (!odontologoAdd) {
       odontologos.push(odontologo);
       localStorage.setItem("odontologos", JSON.stringify(odontologos));
