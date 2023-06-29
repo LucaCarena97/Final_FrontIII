@@ -64,9 +64,9 @@ export function Form() {
             Enviar
           </button>
         )}
+        {error && <p className="error">{error}</p>}
+        {mensaje && <p className="enviado">{mensaje}</p>}
       </form>
-      {error && <p className="error">{error}</p>}
-      {mensaje && <p className="enviado">{mensaje}</p>}
     </div>
   );
 }
