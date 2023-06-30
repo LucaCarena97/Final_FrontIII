@@ -6,7 +6,6 @@ export function Form() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [mensaje, setMensaje] = useState("");
-  const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -15,32 +14,21 @@ export function Form() {
       setError("Datos inválidos");
       return;
     }
-
-    setMensaje(
-      <>
-        Gracias {name}, te contactaremos por {email}
-        <br />
-        Recargar página para volver a enviar
-      </>
-    );
-
+    setMensaje(`Gracias ${name}, te contactaremos por ${email}`);
     setError("");
-    setSubmitted(true);
   }
 
   useEffect(() => {
     if (mensaje) {
       const timer = setTimeout(() => {
+        setName("");
+        setEmail("");
         setMensaje("");
-      }, 3800);
+      }, 3500);
 
       return () => clearTimeout(timer);
     }
   }, [mensaje]);
-
-  useEffect(() => {
-    setSubmitted(false);
-  }, []);
 
   return (
     <div>
@@ -59,11 +47,9 @@ export function Form() {
           placeholder="Correo electronico"
           onChange={(e) => setEmail(e.target.value)}
         />
-        {!submitted && (
-          <button className="form-button" type="submit">
-            Enviar
-          </button>
-        )}
+        <button className="form-button" type="submit">
+          Enviar
+        </button>
         {error && <p className="error">{error}</p>}
         {mensaje && <p className="enviado">{mensaje}</p>}
       </form>
