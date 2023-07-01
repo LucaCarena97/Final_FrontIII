@@ -14,14 +14,6 @@ export function Favs() {
     setOdontologos(actDentista);
   }, [odontologos]);
 
-  function removerFavorito(id) {
-    const actDentista = odontologos.filter(
-      (odontologo) => odontologo.id !== id
-    );
-    setOdontologos(actDentista);
-    localStorage.setItem("odontologos", JSON.stringify(actDentista));
-  }
-
   return (
     <article
       className="favs"
@@ -39,14 +31,7 @@ export function Favs() {
                 username={item.username}
                 key={item.id}
                 id={item.id}
-              >
-                <button
-                  className="borrar-button"
-                  onClick={() => removerFavorito(item.id)}
-                >
-                  Borrar
-                </button>
-              </Card>
+              />
             );
           })}
         </section>
