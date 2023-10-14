@@ -8,8 +8,16 @@ import { Detail } from "./routes/Detail";
 import { Footer } from "./components/Footer";
 
 function App() {
-  return (
-    <>
+  const isMobile = window.matchMedia("(max-width: 1042px)").matches;
+
+  if (isMobile) {
+    return (
+      <div className="mobile-message">
+        Esta aplicación no es compatible con dispositivos móviles.
+      </div>
+    );
+  } else {
+    return (
       <div className="App">
         <Router>
           <Navbar />
@@ -22,8 +30,8 @@ function App() {
           <Footer />
         </Router>
       </div>
-    </>
-  );
+    );
+  }
 }
 
 export default App;
