@@ -4,6 +4,10 @@
 
 ---
 
+Nuestra web en React permite visualizar información detallada de médicos y añadirlos a la lista de favoritos. Realiza solicitudes de datos para cargar la información de cada médico en tiempo real, permitiendo a los usuarios explorar perfiles, conocer su correo electronico, celular y web. React proporciona una experiencia dinámica y personalizada. Esta funcionalidad de 'favoritos' permite a los usuarios personalizar su experiencia y gestionar fácilmente su lista de médicos de confianza, todo ello gracias a la flexibilidad y dinamismo que React aporta a la creación de interfaces web.
+
+---
+
 Criterios de evaluacion
 
 - Deberas desarrollar la aplicacion con Javascript + React

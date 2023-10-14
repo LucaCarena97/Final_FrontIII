@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Card } from "../components/Card";
-import "../routes/Favs.modules.css";
+import favsStyles from "../routes/Favs.module.css";
 import { ContextGlobal } from "../components/utils/global.context";
 
 export function Favs() {
@@ -16,14 +16,16 @@ export function Favs() {
 
   return (
     <article
-      className="favs"
+      className={favsStyles.favs}
       style={{ backgroundColor: tema.home, color: tema.font }}
     >
-      <p className="title-favs">Odontólogos favoritos</p>
+      <p className={favsStyles.titleFavs}>Odontólogos favoritos</p>
       {odontologos.length === 0 ? (
-        <p className="advertencia">No hay guardado ningún odontólogo</p>
+        <p className={favsStyles.advertencia}>
+          No hay guardado ningún odontólogo
+        </p>
       ) : (
-        <section className="card-favs">
+        <section className={favsStyles.cardFavs}>
           {odontologos.map(function (item) {
             return (
               <Card

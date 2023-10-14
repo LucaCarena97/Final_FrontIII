@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { Card } from "../components/Card";
-import "../routes/Home.modules.css";
+import homeStyles from "../routes/Home.module.css";
 import { ContextGlobal } from "../components/utils/global.context";
 
 export function Home() {
@@ -18,13 +18,13 @@ export function Home() {
 
   return (
     <article
-      className="home"
+      className={homeStyles.home}
       style={{ backgroundColor: tema.home, color: tema.font }}
     >
-      <p className="principal">Bienvenido a la sección principal</p>
+      <p className={homeStyles.principal}>Bienvenido a la sección principal</p>
       <hr />
       <br />
-      <section className="card-home">
+      <section className={homeStyles.cardHome}>
         {data.map(function (item) {
           return (
             <Card

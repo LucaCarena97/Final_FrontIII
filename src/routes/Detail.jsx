@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import "../routes/Detail.modules.css";
+import detailStyles from "../routes/Detail.module.css";
 import { ContextGlobal } from "../components/utils/global.context";
 
 export function Detail() {
@@ -23,17 +23,17 @@ export function Detail() {
 
   return (
     <article
-      className="detalle"
+      className={detailStyles.detalle}
       style={{ backgroundColor: tema.home, color: tema.font }}
     >
-      <h2 className="title-detalle">Detalles</h2>
-      <div className="info">
-        <p className="data">Nombre: {detalle.name}</p>
-        <p className="data">Email: {detalle.email}</p>
-        <p className="data">Celular: {detalle.phone}</p>
-        <p className="data">Web: {detalle.website}</p>
+      <h2 className={detailStyles.titleDetalle}>Detalles</h2>
+      <div className={detailStyles.info}>
+        <p className={detailStyles.data}>Nombre: {detalle.name}</p>
+        <p className={detailStyles.data}>Email: {detalle.email}</p>
+        <p className={detailStyles.data}>Celular: {detalle.phone}</p>
+        <p className={detailStyles.data}>Web: {detalle.website}</p>
       </div>
-      <Link to="/" className="atras">
+      <Link to="/" className={detailStyles.atras}>
         Volver a Inicio
       </Link>
     </article>

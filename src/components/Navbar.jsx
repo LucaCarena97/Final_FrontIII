@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../components/Navbar.modules.css";
+import navStyles from "../components/Navbar.module.css";
 import { useContext, useState } from "react";
 import { ContextGlobal } from "./utils/global.context";
 
@@ -17,20 +17,20 @@ export function Navbar() {
   }
   return (
     <nav
-      className="navbar"
+      className={navStyles.navbar}
       style={{ backgroundColor: tema.nav, color: tema.font }}
     >
-      <Link className="nav-title" to={"/"}>
+      <Link className={navStyles.navTitulo} to={"/"}>
         Principal
       </Link>
-      <Link className="nav-title" to={"/contact"}>
+      <Link className={navStyles.navTitulo} to={"/contact"}>
         Contacto
       </Link>
-      <Link className="nav-title" to={"/favs"}>
+      <Link className={navStyles.navTitulo} to={"/favs"}>
         Favoritos
       </Link>
       <button
-        className="boton"
+        className={navStyles.boton}
         onClick={() => {
           cambioTema();
           cambiarColorBoton();

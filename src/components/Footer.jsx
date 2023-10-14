@@ -1,4 +1,4 @@
-import "../components/Footer.modules.css";
+import footerStyles from "../components/Footer.module.css";
 import face from "../images/ico-facebook.png";
 import ig from "../images/ico-instagram.png";
 import tik from "../images/ico-tiktok.png";
@@ -10,28 +10,43 @@ export function Footer() {
   const { tema } = useContext(ContextGlobal);
   return (
     <footer
-      className="footer"
+      className={footerStyles.footer}
       style={{ backgroundColor: tema.footer, color: tema.font }}
     >
-      <div className="info-footer">
-        <p className="nombre">Luca Carena</p>
-        <p className="final">Final Front III</p>
+      <div className={footerStyles.infoFooter}>
+        <a
+          href="https://luca-carena.netlify.app/"
+          className={footerStyles.enlacePerfil}
+        >
+          <p className={footerStyles.nombre}>Web Personal</p>
+        </a>
       </div>
-      <div className="images">
-        <a className="button-class" href="https://www.facebook.com/">
-          <img className="face" src={face} alt="Facebook" />
+
+      <div className={footerStyles.final}>Luca Carena - Final Front III</div>
+
+      <div className={footerStyles.images}>
+        <a
+          className={footerStyles.buttonClass}
+          href="https://www.facebook.com/"
+        >
+          <img className={footerStyles.face} src={face} alt="Facebook" />
         </a>
-        <a className="button-class" href="https://www.instagram.com/">
-          <img className="ig" src={ig} alt="Instagram" />
+        <a
+          className={footerStyles.buttonClass}
+          href="https://www.instagram.com/"
+        >
+          <img className={footerStyles.ig} src={ig} alt="Instagram" />
         </a>
-        <a className="button-class" href="https://www.tiktok.com/">
-          <img className="tik" src={tik} alt="TikTok" />
+        <a className={footerStyles.buttonClass} href="https://www.tiktok.com/">
+          <img className={footerStyles.tik} src={tik} alt="TikTok" />
         </a>
-        <a className="button-class" href="https://www.whatsapp.com/">
-          <img className="wp" src={wp} alt="WhatsApp" />
+        <a
+          className={footerStyles.buttonClass}
+          href="https://www.whatsapp.com/"
+        >
+          <img className={footerStyles.wp} src={wp} alt="WhatsApp" />
         </a>
       </div>
     </footer>
   );
 }
-//

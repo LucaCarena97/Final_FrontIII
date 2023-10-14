@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Form.modules.css";
+import formStyles from "./Form.module.css";
 
 export function Form() {
   const [name, setName] = useState("");
@@ -32,26 +32,26 @@ export function Form() {
 
   return (
     <div>
-      <form className="formulario" onSubmit={handleSubmit}>
+      <form className={formStyles.formulario} onSubmit={handleSubmit}>
         <input
-          className="formulario-input"
+          className={formStyles.formularioInput}
           type="text"
           value={name}
           placeholder="Nombre"
           onChange={(e) => setName(e.target.value)}
         />
         <input
-          className="formulario-input"
+          className={formStyles.formularioInput}
           type="email"
           value={email}
           placeholder="Correo electronico"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button className="form-button" type="submit">
+        <button className={formStyles.formButton} type="submit">
           Enviar
         </button>
-        {error && <p className="error">{error}</p>}
-        {mensaje && <p className="enviado">{mensaje}</p>}
+        {error && <p className={formStyles.error}>{error}</p>}
+        {mensaje && <p className={formStyles.enviado}>{mensaje}</p>}
       </form>
     </div>
   );

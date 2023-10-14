@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.button-class {
+.buttonClass {
   margin: 5px;
   background: none;
   border: none;
@@ -43,9 +43,31 @@
   margin: 30px;
 }
 
-.info-footer {
-  display: flex;
-  gap: 15px;
+.infoFooter {
+  text-align: center;
+  padding: 20px;
+}
+
+.enlacePerfil {
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  border: 2px solid #023e7d;
+  border-radius: 5px;
+  padding: 1px 20px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
+}
+
+.enlacePerfil:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.final {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
 }

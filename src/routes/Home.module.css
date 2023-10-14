@@ -11,7 +11,7 @@
   user-select: none;
 }
 
-.card-home {
+.cardHome {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

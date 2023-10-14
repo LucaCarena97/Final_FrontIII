@@ -12,7 +12,7 @@
   background-color: #8d7966e2;
 }
 
-.card-link {
+.cardLink {
   text-decoration: none;
 }
 
@@ -46,7 +46,7 @@
   text-decoration: none;
 }
 
-.boton-card {
+.botonCard {
   margin-top: 15px;
   background-color: #4caf50;
   color: white;
@@ -58,11 +58,11 @@
   transition: background-color 0.3s ease;
 }
 
-.boton-card:hover {
+.botonCard:hover {
   background-color: #45a049;
 }
 
-.boton-card-delete {
+.botonCardDelete {
   margin-top: 15px;
   background-color: #af4c4c;
   color: white;
@@ -74,7 +74,7 @@
   transition: background-color 0.3s ease;
 }
 
-.boton-card-delete:hover {
+.botonCardDelete:hover {
   background-color: #a04845d8;
 }
 
@@ -82,7 +82,7 @@
   background-color: #a27b6068;
 }
 
-.mensaje-card {
+.mensajeCard {
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 15px;
@@ -91,12 +91,12 @@
   border-radius: 5px;
 }
 
-.mensaje-card.added {
+.mensajeCard.added {
   background-color: #0fff07e2;
   color: #000;
 }
 
-.mensaje-card:not(.added) {
+.mensajeCard:not(.added) {
   background-color: #a72828e1;
   color: #fff;
 }

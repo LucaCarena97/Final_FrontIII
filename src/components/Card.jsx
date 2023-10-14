@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import img from "../images/doctor.jpg";
-import "./Card.modules.css";
+import cardStyles from "./Card.module.css";
 import { useState } from "react";
 
 export function Card({ id, name, username }) {
@@ -51,24 +51,30 @@ export function Card({ id, name, username }) {
   ).some((e) => e.id === odontologo.id);
 
   return (
-    <article className={`card ${isFavorite ? "favorite" : ""}`}>
-      <Link to={`/details/${id}`} className="card-link">
-        <img className="imagen" src={img} alt="doctor" />
-        <p className="name">{name}</p>
-        <p className="user">{odontologo.username}</p>
+    <article
+      className={`${cardStyles.card} ${isFavorite ? cardStyles.favorite : ""}`}
+    >
+      <Link to={`/details/${id}`} className={cardStyles.cardLink}>
+        <img className={cardStyles.imagen} src={img} alt="doctor" />
+        <p className={cardStyles.name}>{name}</p>
+        <p className={cardStyles.user}>{odontologo.username}</p>
       </Link>
       {!isFavorite && (
-        <button className="boton-card" onClick={addFav}>
+        <button className={cardStyles.botonCard} onClick={addFav}>
           Añadir a favoritos
         </button>
       )}
       {isFavorite && (
-        <button className="boton-card-delete" onClick={removeFav}>
+        <button className={cardStyles.botonCardDelete} onClick={removeFav}>
           Eliminar de favoritos
         </button>
       )}
       {mensaje && (
-        <p className={`mensaje-card ${isAdded ? "added" : ""}`}>
+        <p
+          className={`${cardStyles.mensajeCard} ${
+            isAdded ? cardStyles.added : ""
+          }`}
+        >
           {isAdded
             ? "El odontólogo se añadio a favoritos"
             : "El odontólogo se elimino de favoritos"}

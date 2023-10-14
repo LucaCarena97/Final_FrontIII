@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 70px;
   border: 2px solid #8f755d;
   background-color: #8f755d4f;
   padding: 30px;
@@ -10,12 +10,12 @@
   box-shadow: 0px 0px 10px black;
 }
 
-.formulario-input {
+.formularioInput {
   font-size: 1.7rem;
   margin: 5%;
 }
 
-.form-button {
+.formButton {
   background-color: #4caf50;
   color: white;
   border: none;
@@ -27,7 +27,7 @@
   margin: 20px;
 }
 
-.form-button:hover {
+.formButton:hover {
   background-color: #45a049;
 }
 

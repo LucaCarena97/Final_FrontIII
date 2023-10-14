@@ -5,7 +5,7 @@
   padding: 30px;
 }
 
-.title-favs {
+.titleFavs {
   margin: 0;
   padding: 30px;
   font-size: 1.8rem;
@@ -29,7 +29,7 @@
   background-color: rgba(255, 0, 0, 0.1);
 }
 
-.card-favs {
+.cardFavs {
   margin-top: 3%;
   display: flex;
   justify-content: center;
@@ -39,7 +39,7 @@
   text-align: center;
 }
 
-.borrar-button {
+/* .borrar-button {
   background-color: #ff0000;
   color: #fff;
   border: none;
@@ -51,4 +51,4 @@
 
 .borrar-button:hover {
   background-color: #cc0000;
-}
+} */
