@@ -15,7 +15,7 @@ export function Footer() {
     >
       <div className={footerStyles.infoFooter}>
         <a
-          href="https://luca-carena.netlify.app/"
+          href="https://luca-carena-web.vercel.app/"
           className={footerStyles.enlacePerfil}
         >
           <p className={footerStyles.nombre}>Web Personal</p>
